@@ -12,7 +12,7 @@ What you build is up to you, but you must follow these requirements:
 * Your Angular app must send at least ONE HTTP request (use either `$http` or `ng-resource`) to any server.
 * In terms of your server / back-end, you have choices:
 	* External API
-	* Back-end as a service (e.g. [Firebase](https://www.firebase.google.com))
+	* Back-end as a service (e.g. [Firebase](https://firebase.google.com/))
 	* Build your own API
 
 * Your app should be beautifully designed and pleasant to use. Write user stories, draw wireframes, and use well-designed websites as inspiration.
