@@ -12,9 +12,9 @@ What you build is up to you, but you must follow these requirements:
 * Your Angular app must send at least ONE HTTP request (use either `$http` or `ng-resource`) to any server.
 * In terms of your server / back-end, you have choices:
 	* External API
-	* Build your own server in Node
-	* Build your own server with Rails
-	* Back-end as a service (e.g. [Firebase](https://www.firebase.com))
+	* Back-end as a service (e.g. [Firebase](https://www.firebase.google.com))
+	* Build your own API
+
 * Your app should be beautifully designed and pleasant to use. Write user stories, draw wireframes, and use well-designed websites as inspiration.
 * Your code should be organized and commented, and you should push your project to GitHub with frequent, descriptive commit messages.
 * You should not write any jQuery code yourself. Try your best to do angular-style DOM manipulation using built-in and custom directives.
