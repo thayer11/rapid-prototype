@@ -9,7 +9,7 @@
 What you build is up to you, but you must follow these requirements:
 
 * Your Angular app must have at least TWO client-side routes (use either `ngRoute` or `ui-router`) with associated templates and controllers.
-* Your Angular app must send at least TWO HTTP requests (use either `$http` or `ng-resource`) to any server.
+* Your Angular app must send at least TWO HTTP requests (use either `$http` or `ng-resource`) to your server.
 * You must build your own API with Javascript to handle these requests
 
 * Your app should be beautifully designed and pleasant to use. Write user stories, draw wireframes, and use well-designed websites as inspiration.
