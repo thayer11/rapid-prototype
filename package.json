@@ -1,0 +1,24 @@
+{
+  "name": "rapid-prototype",
+  "version": "1.0.0",
+  "description": "![house](https://cloud.githubusercontent.com/assets/7833470/12465814/e9ae781e-bf84-11e5-8de0-6a1d952e5fda.gif)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thayer11/rapid-prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thayer11/rapid-prototype/issues"
+  },
+  "homepage": "https://github.com/thayer11/rapid-prototype#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
