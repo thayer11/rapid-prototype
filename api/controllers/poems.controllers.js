@@ -1,4 +1,5 @@
-var poemData = require('../data/poem-data.json');
+var mongoose = require('mongoose');
+var poem = mongoose.model('Poem');
 
 module.exports.poemsGetAll = function(req, res){
 	console.log("GET the poems");
