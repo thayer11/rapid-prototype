@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var poem = mongoose.model('Poem');
+var Poem = mongoose.model('Poem');
 
 module.exports.poemsGetAll = function(req, res){
 	console.log("GET the poems");
@@ -15,28 +15,35 @@ module.exports.poemsGetAll = function(req, res){
 	if (req.query && req.query.count){
 		count = parseInt(req.query.count, 10);
 	}
-	
-	var returnData = poemData.slice(offset,offset+count);
-	
-	res
-		.status(200)
-		.json( returnData );
-};
 
+Poem
+	.find()
+	.skip(offset)
+	.limit(count)
+	.exec(function(err, poems){
+		console.log("Found poems", poems.length);
+		res
+			.json(poems);
+	});
+}
 module.exports.poemsGetOne = function(req, res){
-	var poemId = req.params.poemId;
-	var thisPoem = poemData[poemId];
-	console.log("GET poemId", poemId);
-	res
-		.status(200)
-		.json( thisPoem );
+	console.log("in the getcard");
+    var id = req.params.id;
+    Poem.findById({_id: id}, function(error,poem) {
+        if(error) {
+            res.json({message: "Couldn't find the poem b/c "+error});
+        } else{
+        res.json({poem: poem});
+	    }
+    });
 };
 
 module.exports.poemsAddOne = function(req, res){
 	console.log("POST new poem");
 	console.log(req.body);
-	res
-		.status(200)
-		.json(req.body);
-
-};
+	var poem = new Poem(req.body);
+	poem.save(function(error) {
+		if(error) res.json({message: "Could not create card b/c "+error});
+	});
+}
+	
