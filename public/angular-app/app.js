@@ -1,17 +1,17 @@
-angular.module('meanpoem',['ngRoute'])
-.config(config)
-.controller('PoemsController', PoemsController);
+angular.module('meanpoem', ['ngRoute']).config(config);
 
-function config($routeProvider){
-	$routeProvider
-	.when('/',{
-		templateUrl: 'angular-app/poem-list/poems.html',
-		controller: PoemsController,
+function config($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'angular-app/poem-list/poems.html',
+      controller: PoemsController,
+      controllerAs: 'vm'
+    })
+	.when('/poem/:id',{
+		templateUrl: 'angular-app/poem-display/poem.html',
+		controller: PoemController,
 		controllerAs: 'vm'
-	});
-}
+	}); 
+   }
+    
 
-function PoemsController(){
-	var vm = this;
-	vs.title = "Poems Holly likes";
-}
