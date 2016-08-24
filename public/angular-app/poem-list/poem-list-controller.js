@@ -1,10 +1,14 @@
 angular.module('meanpoem', ['ngRoute']).config(config);
 
-function PoemsController(){
+
+
+function PoemsController(poemDataFactory){
 	var vm = this;
 	vm.title = "Poems Holly likes";
-	poemdDataFactory.poemlist().then(function(response){
-		vm.poems = response.data;
+	console.log(poemDataFactory);
+	poemDataFactory.poemsList().then(function(response){
+		console.log(response);
+		vm.poems = response;
 	});
 }
 

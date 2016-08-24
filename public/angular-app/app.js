@@ -5,7 +5,7 @@ function config($routeProvider) {
     .when('/', {
       templateUrl: 'angular-app/poem-list/poems.html',
       controller: PoemsController,
-      controllerAs: 'vm'
+      controllerAs: 'vms'
     })
 	.when('/poem/:id',{
 		templateUrl: 'angular-app/poem-display/poem.html',
